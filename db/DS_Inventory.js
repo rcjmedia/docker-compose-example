@@ -27,8 +27,12 @@ class Inventory {
       this._count++;
       return item.id;
     }
-    updateItemById(id) {}
-    deleteItemById(id) {}
+    updateItemById(id) {
+      // console.log('THIS IS THE ID ',id);
+    }
+    deleteItemById(id) {
+      // need work here!
+    }
   }
   
   module.exports = Inventory;
