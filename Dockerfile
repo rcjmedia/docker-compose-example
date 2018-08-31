@@ -1,4 +1,3 @@
-# Built from Node latest Alpine
 FROM node:8.11-alpine
 
 # Specify an optional argument with a default value

@@ -2,4 +2,4 @@ version: '3'
 services:
   my-app:
     build: .
-    image: jaywon/demo-website:local
+    image: rcjmedia/demo-website:local
