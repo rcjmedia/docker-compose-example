@@ -2,7 +2,7 @@ version: '3'
 services:
   my-app:
     image: rcjmedia/demo-website:${IMAGE_VERSION}-local
-    command: ["./node_modules/.bin/nodemon", "app.js"]
+    command: ['npm', 'run', 'dev']
     container_name: my-app-rcjmedia
     volumes:
       - ".:/app/:rw"
@@ -10,7 +10,9 @@ services:
     environment:
       NODE_ENV: development
     ports:
-      - "5000:${PORT}"
+      - "${PORT}:${PORT}"
+      - "3000:3000"
+      - "3001:3001"
     networks:
       - my-app-network
 

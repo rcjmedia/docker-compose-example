@@ -1,7 +1,11 @@
 body {
-    background-color: dodgerblue;
-}
+  background-color: #588782;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #303030; }
+
+.main {
+  display: grid;
+  grid: inherit; }
 
 .items {
-    background-color: blanchedalmond;
-}
+  background-color: #3e726b; }

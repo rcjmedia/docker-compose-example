@@ -31,7 +31,10 @@ class Inventory {
       // console.log('THIS IS THE ID ',id);
     }
     deleteItemById(id) {
-      // need work here!
+      item.id = this._count;
+      this._storage.deleteItemById(id);
+      this._count++;
+      return item.id;
     }
   }
   

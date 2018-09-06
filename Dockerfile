@@ -1,4 +1,5 @@
-FROM node:8.11-alpine
+# Built from Node latest Alpine
+FROM node:10.9.0-alpine
 
 # Specify an optional argument with a default value
 ARG app_directory=/app

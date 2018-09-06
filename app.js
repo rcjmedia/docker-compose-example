@@ -4,6 +4,7 @@ const bp = require('body-parser');
 const exphbs = require('express-handlebars');
 const Inventory = require('./db/DS_Inventory.js');
 const DS_Inv = new Inventory();
+const PORT = process.env.PORT || 5000;
 
 // render the styles.css
 app.use(express.static('public'));
@@ -42,6 +43,14 @@ app.post('/item/new', (req, res) => {
   res.redirect('/');
 });
 
-app.listen(process.env.PORT, () => {
-  console.log(`Started app on port: ${process.env.PORT}`);
+// delete item
+app.delete('/delete', (req,res) => {
+  const item = DS_Inv.deleteItemById(item);
+  res.render('home', { items });
+})
+
+// console.log(PORT);
+app.listen(PORT, () => {
+  console.log(`Started app on port: ${PORT}`);
 });
+
