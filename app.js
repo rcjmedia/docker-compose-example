@@ -6,7 +6,7 @@ const Inventory = require('./db/DS_Inventory.js');
 const DS_Inv = new Inventory();
 const PORT = process.env.PORT || 5000;
 
-// render the styles.css
+// render the styles.css!!!!!
 app.use(express.static('public'));
 
 app.use(bp.urlencoded({ extended: true }));
